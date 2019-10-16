@@ -1,0 +1,43 @@
+<script>
+function getValue()
+{
+	var Email = document.getElementById("inputEmail").value;
+	var Birth = document.getElementById("birth").value;
+	var Age = document.getElementById("age").value;
+	var score = document.getElementById("rangeInput").value;
+	var result = document.getElementById("result");
+	result.innerText = "Email:" + Email + " " + "Birth:" + Birth + " " + "Age:" + Age + " " + "score:" + score;
+}
+</script>
+<form>
+	<fieldset>
+		<legend>
+			请填写您的信息
+		</legend>
+		<td>
+		您的电子邮箱为：
+		</td>
+		<input type="email" id="inputEmail" autofocus="true" required="true">
+		<br/>
+		<td>
+		您的生日为：
+		</td>
+		<input type="date" id="birth">
+		<br/>
+		<td>
+		您当前年龄为：
+		</td>
+		<input type="text" id="age" pattern="^[1-9]?[0-9]$" placeholder="your age">
+        <br/>
+		<td>
+		希望本次分数：
+		</td>
+		<input id="rangeInput" type="range" min="0" max="10" onChange="getValue()" οninput="getValue()">
+		<br/>
+		<span id="result">
+		</span>
+
+	</fieldset>
+</form>
+</body>
+</html>
