@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html> 
 <meta name="content-type" content="text/html; charset=UTF-8"> 
 <head> 
@@ -9,45 +9,35 @@ var numresult;
 var str; 
 
 function onclicknum(nums) { 
-str = document.getElementById("nummessege1"); 
+str = document.getElementById("nummessege"); 
 str.value = str.value + nums; 
-} 
-
-function onclickclearone(){
-str = document.getElementById("nummessege1");
-str.value =str.value.substring(0,str.value.length-1);
-if(str.value.length!=0){
-
-str2.value = "";}
 }
 
+function onclickclearone(){
+str = document.getElementById("nummessege");
+str.value =str.value.substring(0,str.value.length-1);
+} 
+
 function onclickclear() { 
-str1 = document.getElementById("nummessege1"); 
-str2 = document.getElementById("nummessege2"); 
-str1.value = ""; 
-str2.value = ""; 
+str = document.getElementById("nummessege"); 
+str.value = ""; 
 } 
 
 function onclickresult() { 
-str1 = document.getElementById("nummessege1"); 
-str2 = document.getElementById("nummessege2"); 
-str2.value = eval(str1.value); 
+str = document.getElementById("nummessege"); 
+numresult = eval(str.value); 
+str.value = numresult; 
 } 
+
 
 </script> 
 </head> 
-<body bgcolor="hh789" > 
+<body bgcolor="dd567" > 
 <!--定义按键表格,每个按键对应一个事件触发--> 
-<table border="1" align="center" bgColor="#dd456" style="height: 350px; width: 270px"> 
+<table border="1" align="center" bgColor="#zbd7787d8878" style="height: 350px; width: 270px"> 
 <tr> 
 <td colspan="4"> 
-<input type="text" id="nummessege1" disabled="false"
-style="height: 90px; width: 378px; font-size: 50px" /> 
-</td> 
-</tr>
-<tr> 
-<td colspan="4"> 
-<input type="text" id="nummessege2" disabled="false"
+<input type="text" id="nummessege" disabled="false"
 style="height: 90px; width: 378px; font-size: 50px" /> 
 </td> 
 </tr> 
@@ -134,11 +124,11 @@ onclick="onclickresult()"
 style="height: 70px; width: 90px; font-size: 35px" /> 
 </td> 
 <td>
-<input type="button" value="C" id="clearone" onclick="onclickclearone()" 
+<input type="button" value="◄" id="clearone" onclick="onclickclearone()" 
 style="height: 70px; width: 90px; font-size: 35px" /> 
 </td>
 <td> 
-<input type="button" value="AC" id="clear" onclick="onclickclear()" 
+<input type="button" value="C" id="clear" onclick="onclickclear()" 
 style="height: 70px; width: 90px; font-size: 35px" /> 
 </td> 
 </tr> 
